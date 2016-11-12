@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity
         // this. A Context provides access to resources you need.
         // android.R.layout.simple_list_item_1 is one of the resources needed.
         // It is a predefined layout provided by Android that stands in as a default
-        ListAdapter theAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
-                favoriteTVShows);
+        //ListAdapter theAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,favoriteTVShows);
+        ListAdapter theAdapter = new ArrayAdapter<String>(this,R.layout.row_layout,R.id.textViewOne,favoriteTVShows);
         // ListViews display data in a scrollable list
         ListView theListView = (ListView) findViewById(R.id.theListView);
         // Tells the ListView what data to use
