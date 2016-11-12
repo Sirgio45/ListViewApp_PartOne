@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -25,8 +24,9 @@ public class MainActivity extends AppCompatActivity
         // this. A Context provides access to resources you need.
         // android.R.layout.simple_list_item_1 is one of the resources needed.
         // It is a predefined layout provided by Android that stands in as a default
-        //ListAdapter theAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,favoriteTVShows);
-        ListAdapter theAdapter = new ArrayAdapter<String>(this,R.layout.row_layout,R.id.textViewOne,favoriteTVShows);
+        // 1 ListAdapter theAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,favoriteTVShows);
+        // 2 ListAdapter theAdapter = new ArrayAdapter<String>(this,R.layout.row_layout,R.id.textViewOne,favoriteTVShows);
+        ListAdapter theAdapter = new MyAdapter(this,favoriteTVShows);//3
         // ListViews display data in a scrollable list
         ListView theListView = (ListView) findViewById(R.id.theListView);
         // Tells the ListView what data to use
